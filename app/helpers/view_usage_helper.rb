@@ -1,0 +1,2 @@
+module ViewUsageHelper
+end

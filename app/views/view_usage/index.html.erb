@@ -1,0 +1,78 @@
+
+<div class="grid grid-pad">
+    <div class="col-1-2">
+       <div class="content">
+       	
+   
+           <h3>Monthly search statistics</h3>
+			<form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST">
+			<div align="left">
+			<select name="month" id="month" onchange="" size="1">
+			    <option value="01">January</option>
+			    <option value="02">February</option>
+			    <option value="03">March</option>
+			    <option value="04">April</option>
+			    <option value="05">May</option>
+			    <option value="06">June</option>
+			    <option value="07">July</option>
+			    <option value="08">August</option>
+			    <option value="09">September</option>
+			    <option value="10">October</option>
+			    <option value="11">November</option>
+			    <option value="12">December</option>
+			</select>
+			</div>
+			</form>
+           <p>Drop down Under construction</p>
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="content">
+       		<h3>
+       			
+       			<%= button_to 'Show Results', { :action => 'show'}, :method => :get %>
+       		</h3>
+
+       </div>
+    </div>
+</div>
+
+
+<div class="grid grid-pad">
+    <div class="col-1-2">
+       <div class="content">
+       	
+   
+           <h3>Select searches per mall</h3>
+           
+           
+			<form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST">
+			<div align="left">
+			<select name="malls" id="malls" onchange="" size="1">
+			    <option value="01">Abreeza</option>
+			    <option value="02">Alabang Town Center</option>
+			    <option value="03">Ayala Center Cebu</option>
+			    <option value="04">Centrio</option>
+			    <option value="05">District Imus</option>
+			    <option value="06">District North Point Bacolod</option>
+			    <option value="07">Glorietta</option>
+			    <option value="08">Greenbelt</option>
+			    <option value="09">Harbor Point</option>
+			    <option value="10">Market! Market!</option>
+			    <option value="11">MarQuee</option>
+			    <option value="12">TriNoma</option>
+			    
+			</select>
+			</div>
+			</form>
+			<p>Drop down Under construction</p>
+           
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="content">
+           <h3><%= button_to 'Show Results', { :action => 'show'}, :method => :get %></h3>
+       </div>
+    </div>
+</div>
+

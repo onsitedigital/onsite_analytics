@@ -1,0 +1,33 @@
+
+
+<div class="grid grid-pad">
+    <div class="col-1-1">
+       <div class="content">
+           <h3>June Results</h3>
+       </div>
+    </div>
+</div>
+
+<div class="grid grid-pad">
+    <div class="col-1-2">
+       <div class="content">
+           <h3>Total number of searches (all kiosks) </h3>
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="content">
+           <h3><%=@wcount %></h3>
+       </div>
+    </div>
+</div>
+
+<div class="grid grid-pad">
+    <div class="col-1-1">
+       <div class="content">
+       	Log names
+       	<% @wlogs.each do |log| %>
+           <p><%=log.name %></p>
+           <% end %>
+       </div>
+    </div>
+</div>
