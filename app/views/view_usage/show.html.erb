@@ -21,14 +21,21 @@
     </div>
 </div>
 
+
+<% @totalmalls.each do |mall| %>
+
 <div class="grid grid-pad">
-    <div class="col-1-1">
+    <div class="col-1-2">
        <div class="content">
-       	Log names
-       	<% @wlogs.each do |log| %>
-       	
-           <p>Id: <%=log %></p>
-           <% end %>
+           <h3>Mall </h3>
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="content">
+           <h3><%=@mall %></h3>
        </div>
     </div>
 </div>
+
+<% end %>
+

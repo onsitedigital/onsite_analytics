@@ -23,11 +23,28 @@ class ViewUsageController < ApplicationController
     to_date = Date.parse('July 18, 2013')
     logs = WidgetLog.where(:action =>'search', :date_stamp => from_date.beginning_of_day..to_date.end_of_day)
     
-    kiosks = []
-    for kiosk in logs
-      kiosks << kiosk   
-    end
-    @wlogs = kiosks
+    
+    site = Site.all
+    kiosk = Kiosk.all
+    
+    total_mall_counts = []
+    per_mall_counts = 0
+    for sites in site
+      
+      per_mall = kiosk.where(:group_id => sites.id)
+      
+ 
+      for malls in per_mall
+ 
+         per_mall_counts = per_mall_counts + logs.where(:kiosk_id => malls.id).count
+         puts logs.where(:kiosk_id => malls.id).count
+      end
+      puts "Counting.."
+      puts per_mall_counts
+      total_mall_counts << per_mall_counts
+    end   
+    @mallcount = per_mall.count   
+    @totalmalls = total_mall_counts    
     @wcount = logs.count
   end
   
